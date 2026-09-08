@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Personal Reading List</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell">
+<header class="hero">
+<p class="eyebrow">My Library</p>
+<h1>Personal reading list</h1>
+<p>Save books you want to read later and keep your next read in one place.</p>
+</header>
+
+<section class="search-box" aria-labelledby="search-title">
+<div><h2 id="search-title">Find a book</h2><p>Search the Open Library catalogue and add a title to your list.</p></div>
+<form id="searchForm">
+<label class="sr-only" for="searchInput">Book title or author</label>
+<input id="searchInput" type="search" placeholder="Try “The Hobbit”" autocomplete="off">
+<button type="submit">Search</button>
+</form>
+</section>
+
+<div id="status" aria-live="polite" aria-atomic="true"></div>
+
+<section id="results" hidden aria-labelledby="results-title">
+<div class="heading"><h2 id="results-title">Search results</h2><span id="resultCount"></span></div>
+<div id="resultsGrid" class="grid"></div>
+</section>
+
+<section aria-labelledby="list-title">
+<div class="heading"><div><p class="eyebrow">Saved for later</p><h2 id="list-title">Your reading list</h2></div><span id="listCount"></span></div>
+<div id="list" class="grid"></div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
